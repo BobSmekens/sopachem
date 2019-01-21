@@ -15,11 +15,15 @@
 <form action="index.php" method="$_POST">
 product_name: <input type="text" name="product_name_php"><br>
 product_description: <input type="text" name ="product_description_php"><br>
-<input type="submit">
+product_img_url <input type="text" name="product_img_url_php"><br>
+product_rating <input type="text" name="product_rating_php"><br>
+product_branche <input type="text" name="product_branche_php"><br>
+
+
+<input type="submit" name="submit_product_php">
 </form>
 
 <?php
-
 //verbinding maken
 $conn=mysqli_connect("localhost","root","","sopachem_clients");
 // Check connection
@@ -38,6 +42,25 @@ $productResults = $conn->query($products);
 $clientsAll = $conn->query($clients);
 $showImage = $conn->query($image);
 $productname_imgurl = $conn->query($imgUrl_and_productName);
+
+if ($productname_imgurl->num_rows > 0){
+
+    while($row = $productname_imgurl->fetch_assoc()) {
+        echo "$row[product_name]" . "<img src=" . $row["product_img_url"] .">";
+    } 
+    } else {
+        echo "no results";
+    }
+
+$productname = mysqli_real_escape_string($conn, $_POST['product_name_php']);
+$productdescription = mysqli_real_escape_string($conn, $_POST['product_description_php']);
+$productimgurl = mysqli_real_escape_string($conn, $_POST['product_img_url_php']);
+$productrating = mysqli_real_escape_string($conn, $_POST['product_rating_php']);
+$productbranche = mysqli_real_escape_string($conn, $_POST['product_branche_php']);
+
+$submit = "INSERT INTO products(product_id, product_name, product_description, product_img_url, product_rating, product_branche)
+VALUES (NULL,'$productname', '$productdescription', '$productimgurl', '$productrating', '$productbranche')";
+
 
 /*
     if ($productResults->num_rows > 0) {
@@ -59,17 +82,7 @@ $productname_imgurl = $conn->query($imgUrl_and_productName);
     } else {
         echo "no results";
     }
-*/
-    
-    
-    if ($productname_imgurl->num_rows > 0){
-
-        while($row = $productname_imgurl->fetch_assoc()) {
-            echo "$row[product_name]" . "<br>" . "<img src=" . $row["product_img_url"] .">";
-            } 
-        } else {
-            echo "no results";
-        }
+*/ 
 
 mysqli_close($conn);
 ?>
@@ -77,3 +90,4 @@ mysqli_close($conn);
     
 </body>
 </html>
+
