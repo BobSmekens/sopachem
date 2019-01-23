@@ -1,7 +1,222 @@
-h1  {
-    color: red;
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-form {
-    background-color: blue;
+body {
+    margin: 0;
+}
+
+.debug {
+    border: 3px solid red;
+}
+
+#branding {
+    height: 80px;
+    background-color: rgba(0,0,0,0);
+    display: inline-block;
+    padding-left: 100px;
+}
+
+#branding img {
+    height: 80px;
+    width: 80px;
+    float: left;
+    background-color: rgba(0,0,0,0)
+}
+.nav-link {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 25px 50px 0 0;
+    text-transform: uppercase;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 5;
+    background-color: white;
+}
+
+.navbar-container {
+    width: 70%;
+    height: 80px;
+    display: block;
+    float: right;
+    margin: auto;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.sopachem-banner {
+    width: 100%;
+    height: 60vh;
+    margin-top: 12vh;
+    background-color: white;
+    position: relative;
+}
+
+.sopachem-banner img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:  1;
+}
+
+.banner-txt {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    color: #1a1aff;
+}
+
+.banner-txt h2 {
+    background-color: white;
+    width: 300px;
+    position: absolute;
+    left: 40vw;
+    top: 50px;
+    padding: 10px;
+}
+
+.banner-txt h3 {
+    background-color: rgba(0,0,255,0.6);
+    width: 200px;
+    position: absolute;
+    left: 35vw;
+    top: 100px;
+    padding: 10px;
+    color: white;
+}
+
+.main-product-container {
+    width: 100%;
+    height: 80vh;
+    background-image: url("../img/genesig.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.main-product-title {
+    display: block;
+    font-size: 48px;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.main-product-description {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#shop-btn {
+    margin: 50px auto 0 auto;
+    display: block;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    border: none;
+    background-color: orange;
+}
+
+#shop-btn:hover {
+    color: orange;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.products-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    background-image: linear-gradient(to bottom, white, grey);
+}
+
+.product-card {
+    height: 50vh;
+    min-height: 300px;
+    width: 30%;
+    min-width: 230px;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    margin: 10px;
+    text-align: left;
+    display: block;
+    align-items: flex-end;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 180px;
+    border: 1px solid black;
+}
+
+.selection-container {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-weight: bold;
+}
+
+.product-select {
+    display: inline-block;
+    padding: 20px 50px;
+    margin: auto;
+}
+
+.product-select:hover {
+    color: blue;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.productpage-main-container {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    margin: 20vh auto 0 auto;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.productpage-product {
+    flex: 2;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.productpage-product img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.productpage-description-container {
+    flex: 3;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.productpage-description {
+    width: 80%;
+    margin: 15% auto 0 auto;
+    box-sizing: border-box;
 }
