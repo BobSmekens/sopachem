@@ -3,6 +3,20 @@ html {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+* {
+    font-family: 'Slabo 27px', serif;
+}
+
 body {
     margin: 0;
 }
@@ -12,14 +26,14 @@ body {
 }
 
 #branding {
-    height: 80px;
+    height: 70px;
     background-color: rgba(0,0,0,0);
     display: inline-block;
     padding-left: 100px;
 }
 
 #branding img {
-    height: 80px;
+    height: 70px;
     width: 80px;
     float: left;
     background-color: rgba(0,0,0,0)
@@ -28,13 +42,17 @@ body {
     text-decoration: none;
     color: black;
     display: inline-block;
-    padding: 25px 50px 0 0;
+    padding: 30px 50px 0 0;
     text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: teal;
+    transition: 1s;
 }
 
 .navbar {
     width: 100%;
-    height: 80px;
     justify-content: center;
     position: fixed;
     top: 0;
@@ -46,7 +64,6 @@ body {
 
 .navbar-container {
     width: 70%;
-    height: 80px;
     display: block;
     float: right;
     margin: auto;
@@ -56,10 +73,14 @@ body {
 
 .sopachem-banner {
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     margin-top: 12vh;
     background-color: white;
     position: relative;
+    background-image: url(../img/slider1.png);
+    background-size: 80% cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .sopachem-banner img {
@@ -99,23 +120,28 @@ body {
 
 .main-product-container {
     width: 100%;
-    height: 80vh;
-    background-image: url("../img/genesig.png");
+    height: 1000px;
+    background-image: linear-gradient(to bottom, silver, #e6f2ff);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    text-align: center;
+}
+
+.main-product-container img {
+    margin: 40px;
 }
 
 .main-product-title {
     display: block;
-    font-size: 48px;
+    font-size: 72px;
     text-align: center;
     padding-top: 20vh;
 }
 
 .main-product-description {
     display: block;
-    font-size: 24px;
+    font-size: 32px;
     text-align: center;
     padding-top: 10px;
 }
@@ -123,9 +149,11 @@ body {
 #shop-btn {
     margin: 50px auto 0 auto;
     display: block;
-    height: 40px;
-    width: 120px;
+    height: 50px;
+    width: 150px;
     text-align: center;
+    font-weight: 200;
+    font-size: 17px;
     border: none;
     background-color: orange;
 }
@@ -136,12 +164,69 @@ body {
     transition: 0.5s;
 }
 
+.articles-container {
+    display: flex;
+    width: 80%;
+    min-height: 200px;
+    margin:auto;
+}
+
+.articles-title {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #444;
+    letter-spacing: 3px;
+}
+
+.article-card p {
+    text-align: left;
+}
+
+.article-card {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.article-card h4 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.articles-commas img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    opacity: 0.7;
+}
+
+.flexbox {
+    display:flex;
+    width: 100%;
+}
+
+.supplier-box {
+    flex: 1;
+    text-align: right;
+    padding: 20px;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.supplier-box span {
+    font-weight: 500;
+}
+
 .products-container {
     width: 80%;
-    margin: auto;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+    flex: 8;
     align-items: flex-end;
     background-image: linear-gradient(to bottom, white, grey);
 }
@@ -152,7 +237,7 @@ body {
     width: 30%;
     min-width: 230px;
     box-sizing: border-box;
-    padding: 20px 40px;
+    padding: 20px;
     margin: 10px;
     text-align: left;
     display: block;
@@ -163,8 +248,10 @@ body {
     width: 100%;
     max-width: 200px;
     height: 180px;
-    border: 1px solid black;
+    -webkit-box-shadow: 10px 10px 107px -1px rgba(0,0,0,0.3);
 }
+
+
 
 .selection-container {
     text-align: center;
@@ -174,6 +261,8 @@ body {
     border-top: 1px solid black;
     font-weight: bold;
 }
+
+
 
 .product-select {
     display: inline-block;

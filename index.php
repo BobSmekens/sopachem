@@ -6,8 +6,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css\sopachem.css" />
-    <script src="js/sopachem.js"></script>
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Slabo+27px" rel="stylesheet"></head>
 <body>
 
 
@@ -22,7 +21,7 @@
 </div>
 
 <div class="sopachem-banner">
-    <img src="img/slider1.png" alt="">
+
     <div class="banner-txt">
         <h2>Sopachem Life Sciences</h2>
         <h3>Inspiring research</h3>
@@ -33,23 +32,85 @@
     <div class="main-product-title">BMS Genesig X2.0</div>
     <div class="main-product-description">Fast, accurate, uniform DNA sequencer.</div>
     <button id="shop-btn">SHOP NOW</button>
+
+    <img src="img/zugase.png" alt="">
 </div>
 
+<!--
 <div class="selection-container">
-    <div class="product-select">DNA and Bio-enginering</div>
-    <div class="product-select">Cell culture</div>
-    <div class="product-select">CPR</div>
+    <div class="product-select" onclick="showBio()">Bio-enginering</div>
+    <div class="product-select" onclick="showDNA()">DNA</div>
+    <div class="product-select" onclick="showCells()">Cell culture</div>
+    <div class="product-select" onclick="showCPR()">CPR</div>
+</div>
+-->
+<div class="articles-title">'The crowd has spoken'</div>
+<div class="articles-container debug">
+
+    <div class="article-card debug">
+        <span class="articles-commas"><img src="img/quote.png" alt=""></span>
+        <h4>article title</h4>
+        <p>All I can say is WOW. I had the previous version 
+            that I thought was the best and this one 
+            is even better. Even though it is smaller/thinner, 
+            they still somehow made it even more sturdy and rugged. 
+            Amazing! This new version is rock solid!
+        </p>
+    </div>
+    <div class="article-card">
+    <span class="articles-commas"><img src="img/quote.png" alt=""></span>
+        <h4>article title</h4>
+        <p>All I can say is WOW. I had the previous version 
+            that I thought was the best and this one 
+            is even better. Even though it is smaller/thinner, 
+            they still somehow made it even more sturdy and rugged. 
+            Amazing! This new version is rock solid!
+        </p>
+    </div>
+    <div class="article-card">
+    <span class="articles-commas"><img src="img/quote.png" alt=""></span>
+        <h4>article title</h4>
+        <p>All I can say is WOW. I had the previous version 
+            that I thought was the best and this one 
+            is even better. Even though it is smaller/thinner, 
+            they still somehow made it even more sturdy and rugged. 
+            Amazing! This new version is rock solid!
+        </p>
+    </div>
 </div>
 
+
+
+        
+<div class="flexbox">
+    <div class="select-links-box">
+        <div class="supplier-box">
+        <span>Sort by supplier:</span>    
+        
+        <?php include "db_connection.php";
+                include "php/supplierlinks.php";
+        ?>
+        </div><br>
+
+        <div class="supplier-box">
+        <span>Sort by category:</span>    
+        
+        <?php include "db_connection.php";
+                include "php/brancheslinks.php";
+        ?>
+        </div>
+    </div>
 <div class="products-container">
-    <?php 
-        include "db_connection.php";
-        include "php/productcard.php" ;
-    ?>;
+        <?php 
+            include "db_connection.php";
+            include "php/productcard.php" ;
+        ?>;
+</div>
 </div>
 
 
     
+<script src="js/sopachem.js"></script>  
 </body>
 </html>
 
