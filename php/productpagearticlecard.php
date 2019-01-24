@@ -9,15 +9,19 @@
 </head>
 <body>
     <?php
-    $query = "SELECT product_id, product_rating, product_name, product_description, product_img_url, product_category, product_supplier, product_branche, product_category FROM products GROUP BY product_category";
+    $articleId = $_GET['category'];
+    include "db_connection.php";
+    $query = "SELECT * FROM articles WHERE article_branche = $articleId LIMIT 3";
     
     $db_result = $conn->query($query);  
 
     foreach ($db_result as $row)
     {            
-        echo 
-            '<a href="php/branches.php?category=' . $row['product_branche'] . '">' .
-            '<p>' . $row['product_category'] . '</p></a>';
+        echo '<div class="productpage-articlecard">
+            <h2>' . $row['article_title'] . '</h2>
+            <p>"' . $row['article_text'] . 
+            '"</p>
+        </div>';
             
     }     
 ?>

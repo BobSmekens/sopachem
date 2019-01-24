@@ -13,18 +13,18 @@
 <div class="navbar">
     <div class= "" id="branding"><a href="index.php"><img src="img/sopachemlogo.png" alt=""></a></div>
     <div class="navbar-container">
-        <a class="nav-link" href="">Life Sciences</a>
-        <a class="nav-link" href="">Biobanking</a>
-        <a class="nav-link" href="">Diagnostics</a>
-        <a class="nav-link" href="">Analytical</a>
+        <a class="nav-link" href="">Watery fluids</a>
+        <a class="nav-link" href="">Human juice</a>
+        <a class="nav-link" href="">Nanobots</a>
+        <a class="nav-link" href="">Scienceses</a>
      </div>
 </div>
 
-<div class="sopachem-banner">
+<div class="sopachem-banner" id="banner">
 
     <div class="banner-txt">
-        <h2>Sopachem Life Sciences</h2>
-        <h3>Inspiring research</h3>
+        <h2>Fluid Technology</h2>
+        <h3>Fluids AND technology</h3>
     </div>
 </div>
 
@@ -45,60 +45,30 @@
 </div>
 -->
 <div class="articles-title">'The crowd has spoken'</div>
-<div class="articles-container debug">
-
-    <div class="article-card debug">
-        <span class="articles-commas"><img src="img/quote.png" alt=""></span>
-        <h4>article title</h4>
-        <p>All I can say is WOW. I had the previous version 
-            that I thought was the best and this one 
-            is even better. Even though it is smaller/thinner, 
-            they still somehow made it even more sturdy and rugged. 
-            Amazing! This new version is rock solid!
-        </p>
-    </div>
-    <div class="article-card">
-    <span class="articles-commas"><img src="img/quote.png" alt=""></span>
-        <h4>article title</h4>
-        <p>All I can say is WOW. I had the previous version 
-            that I thought was the best and this one 
-            is even better. Even though it is smaller/thinner, 
-            they still somehow made it even more sturdy and rugged. 
-            Amazing! This new version is rock solid!
-        </p>
-    </div>
-    <div class="article-card">
-    <span class="articles-commas"><img src="img/quote.png" alt=""></span>
-        <h4>article title</h4>
-        <p>All I can say is WOW. I had the previous version 
-            that I thought was the best and this one 
-            is even better. Even though it is smaller/thinner, 
-            they still somehow made it even more sturdy and rugged. 
-            Amazing! This new version is rock solid!
-        </p>
-    </div>
+<div class="articles-container">
+    <?php include "php/getarticles.php"; ?>
 </div>
 
-
+<div class="horizontal-line"></div>
 
         
 <div class="flexbox">
     <div class="select-links-box">
         <div class="supplier-box">
-        <span>Sort by supplier:</span>    
-        
-        <?php include "db_connection.php";
-                include "php/supplierlinks.php";
-        ?>
-        </div><br>
+            <span>Sort by category:</span>    
+            <?php include "db_connection.php";
+                    include "php/brancheslinks.php";
+            ?>
+        </div>
 
         <div class="supplier-box">
-        <span>Sort by category:</span>    
-        
-        <?php include "db_connection.php";
-                include "php/brancheslinks.php";
-        ?>
+            <span>Sort by supplier:</span>    
+            <?php include "db_connection.php";
+                    include "php/supplierlinks.php";
+            ?>
         </div>
+
+       
     </div>
 <div class="products-container">
         <?php 

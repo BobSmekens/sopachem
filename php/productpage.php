@@ -5,43 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="..\css\sopachem.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css\sopachem.css" />
 </head>
 <body>
 
 
 <div class="navbar">
-    <div class= "" id="branding"><a href="index.php"><img src="..\img/sopachemlogo.png" alt=""></a></div>
+    <div class= "" id="branding"><a href="../index.php"><img src="..\img/sopachemlogo.png" alt=""></a></div>
     <div class="navbar-container">
-        <a class="nav-link" href="">Life Sciences</a>
-        <a class="nav-link" href="">Biobanking</a>
-        <a class="nav-link" href="">Diagnostics</a>
-        <a class="nav-link" href="">Analytical</a>
+        <a class="nav-link" href="">Watery fluids</a>
+        <a class="nav-link" href="">Human juice</a>
+        <a class="nav-link" href="">Nanobots</a>
+        <a class="nav-link" href="">Scienceses</a>
      </div>
 </div>
 
-<?php
-include "singleproduct.php";
-/*
-    <div class="productpage-description-container debug">
-        <div class="productpage-description debug">
-        <h2>mic 2.0 extra large X</h2>
-        <p>Duis et tortor eros. Sed a maximus lectus. 
-            Vivamus vehicula ex sed tellus sagittis, in fringilla 
-            libero ultricies. Curabitur non venenatis risus. Duis 
-            id justo convallis, elementum mauris a, scelerisque leo. 
-            Nunc pellentesque faucibus massa, ac sollicitudin tellus 
-            facilisis sed. Nunc lobortis vestibulum nunc eu tristique.
-             Proin neque purus, bibendum sed neque non, tempus egestas
-            erat.
-        </p>
-        </div>
-        
+<?php include "singleproduct.php";   ?>
 
-    </div>
+<div class="productpage-articles-title">Our fanatics say:</div>
+<div class="productpage-articles-container">
+    <?php include "productpagearticlecard.php"; ?>
 </div>
-*/
-    ?>
+
 </body>
 </html>
 

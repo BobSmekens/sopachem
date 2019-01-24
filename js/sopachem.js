@@ -67,7 +67,11 @@ function showCells () {
     }
 }
 
+var slider = document.getElementsByClassName("sopachem-banner");
 
+function changebg() {
+    slider[0].style.display = "none";
+}
 
 
 
