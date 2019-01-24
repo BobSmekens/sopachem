@@ -45,6 +45,8 @@ body {
     display: inline-block;
     padding: 30px 50px 0 0;
     text-transform: uppercase;
+    animation: fadein-wrapper 2s forwards ease 0.2s;
+    opacity: 0;
 }
 
 .nav-link:hover {
@@ -61,6 +63,7 @@ body {
     color: white;
     z-index: 5;
     background-color: white;
+ 
 }
 
 .navbar-container {
@@ -71,8 +74,51 @@ body {
     text-align: right;
     padding-right: 50px;
 }
+
 #banner {
     display: block;
+}
+
+@media (max-width: 830px) {
+
+    #branding {
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    #branding img {
+        float: none;
+        padding: 0;
+        transform: scale(2);
+    }
+
+    .navbar {
+        position: relative;
+        border: none;
+        display: block;
+    }
+
+    .navbar-container {
+        width: 100%;
+        display: block;
+        float: none;
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sopachem-banner {
+        margin-top: 50px;
+    }
+
 }
 
 .sopachem-banner {
@@ -270,6 +316,13 @@ body {
     -webkit-box-shadow: 10px 10px 107px -1px rgba(0,0,0,0);
 }
 
+.product-card:hover {
+    transform: scale(1.2);
+    transition: 2s ease;
+    z-index: 3;
+    color: black;
+}
+
 .selection-container {
     text-align: center;
     margin: auto;
@@ -291,15 +344,8 @@ body {
     cursor: pointer;
 }
 
-.branches-body {
-    background-image: linear-gradient(to bottom, silver, #e6f2ff, silver);
-    background-size: cover;
-    text-align: center;
-}
-
 .productpage-main-container {
     width: 80%;
-    min-height: 60vh;
     display: flex;
     margin: 10vh auto 0 auto;
     flex-wrap: wrap;
@@ -308,11 +354,12 @@ body {
 }
 
 .productpage-branches-container {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .branches-wrapper {
@@ -331,14 +378,27 @@ body {
     min-width: 400px;
 }
 
+.rating {
+    text-align: right;
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
 .branches-product {
   flex: 2;  
   
 }
 
+@media (max-width: 830px) {
+    .branches-product img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
 .branches-product img{
-    max-width: 150px;
-    max-height: 120px;
+    max-width: 250px;
+    max-height: 250px;
     padding: 40px;
 }
 
@@ -397,4 +457,94 @@ body {
 .productpage-articlecard h2 {
     text-align: center;
     font-size: 28px;
+}
+
+.supplier-banner {
+    margin-top: 12vh;
+    width: 100%;
+    position: relative;
+    border: 1px solid black;
+    align-items: center;
+    animation: fadein-banner 3s forwards ease;
+    opacity: 0;
+}
+
+@keyframes fadein-banner {
+    0% {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    100%{transform: translateX(0); opacity: 1;};
+}
+
+.supplier-banner-txt {
+    font-size: 32px;
+    width: 65%;
+    margin: auto;
+    padding: 40px 0;
+   
+}
+
+.supplier-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 20px;
+    width: 80%;
+    border-bottom: 1px solid black;
+    margin: 0 auto 50px auto;
+    animation: fadein-title 2s forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+@keyframes fadein-title {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    100%{transform: translateX(0); opacity: 1;};
+}
+
+.jumbo-wrapper {
+    background-image: linear-gradient(to bottom, silver, #e6f2ff);
+    padding-top: 50px;
+    width: 90%;
+    margin: auto;
+    animation: fadein-wrapper 2s forwards ease 0.2s;
+    opacity: 0;
+}
+
+@keyframes fadein-wrapper {
+    0%{opacity: 0; transform: translateY(10px)}
+    100%{opacity: 1; transform: translateY(0)};
+}
+
+.footer-container {
+    width: 90%;
+    position: relative;
+    margin: 10px auto 0 auto;
+    border-top: 1px solid black;
+}
+
+.footer-left {
+    padding: 20px 50px;
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    left: 50px;
+}
+
+.footer-right {
+    float: right;
+    display: inline-block;
+    padding: 5px;
+}
+
+.footer-right img {
+    max-height: 50px;
+}
+.footer-right a {
+    padding-right: 20px;
 }

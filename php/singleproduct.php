@@ -21,7 +21,8 @@ $db_result = $conn->query($query);
     {            
      echo '<div class="productpage-main-container">
             <div class="productpage-product">
-            <img src="' . $row['product_img_url'] . '" alt="">
+            <img src="' . $row['product_img_url'] . '" alt=""><br> <span class="rating">Product rating: ' .
+            $row['product_rating']. '<br>Maximum rating: &#9734&#9734&#9734&#9734&#9734&#9734&#9734&#9734&#9734&#9734 </span>
             </div>' . '<div class="productpage-description-container">
             <div class="productpage-description">
             <h2>' . $row['product_name'] . '</h2>

@@ -13,10 +13,8 @@
 <div class="navbar">
     <div class= "" id="branding"><a href="index.php"><img src="img/sopachemlogo.png" alt=""></a></div>
     <div class="navbar-container">
-        <a class="nav-link" href="">Watery fluids</a>
-        <a class="nav-link" href="">Human juice</a>
-        <a class="nav-link" href="">Nanobots</a>
-        <a class="nav-link" href="">Scienceses</a>
+        <a class="nav-link" href="php/branches.php?category=Fluids">Watery fluids</a>
+        <a class="nav-link" href="php/branches.php?category=Technology">Sciencing science scienceses</a>
      </div>
 </div>
 
@@ -78,7 +76,17 @@
 </div>
 </div>
 
+<div class="footer-container">
+    <div class="footer-left">
+        copyright&copy bob 2019
+    </div>
+    <div class="footer-right">
+        <a href=""><img src="img/facebook.png" alt=""></a>
+        <a href=""><img src="img/instagram.png" alt=""></a>
+        <a href=""><img src="img/twitter.png" alt=""></a>
+    </div>
 
+</div>
     
 <script src="js/sopachem.js"></script>  
 </body>

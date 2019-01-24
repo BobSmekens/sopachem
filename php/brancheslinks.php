@@ -16,7 +16,7 @@
     foreach ($db_result as $row)
     {            
         echo 
-            '<a href="php/branches.php?category=' . $row['product_branche'] . '">' .
+            '<a href="php/branches.php?category=' . $row['product_category'] . '">' .
             '<p>' . $row['product_category'] . '</p></a>';
             
     }     

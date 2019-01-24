@@ -8,30 +8,41 @@
   
 </head>
 <body>
-<div class="navbar">
-    <div class= "" id="branding"><a href="../index.php"><img src="..\img/sopachemlogo.png" alt=""></a></div>
-    <div class="navbar-container">
-        <a class="nav-link" href="">Watery fluids</a>
-        <a class="nav-link" href="">Human juice</a>
-        <a class="nav-link" href="">Nanobots</a>
-        <a class="nav-link" href="">Scienceses</a>
-     </div>
+<?php include "header.php" ?>
+
+
+<div class="supplier-banner debug">
+    <div class="supplier-banner-txt">
+        We only want the best for our customers. Thats why we select only the best of the best suppliers.
+        This way we can guarantee only quality products and a 99 years warranty.
+
+    </div>
+
 </div>
+
 
     <?php
     $supplierId = $_GET['product_supplier'];
+    echo '<div class="supplier-title">' . $supplierId . '</div>';
+    ?>
 
+<div class="jumbo-wrapper">
+    <?php
+    $supplierId = $_GET['product_supplier'];
     include "db_connection.php";
     $query = "SELECT * FROM products WHERE product_supplier = '$supplierId'";
     
     $db_result = $conn->query($query);  
 
+    
     foreach ($db_result as $row)
     {            
-     echo '<div class="productpage-branches-container">
+     echo 
+            '<div class="productpage-branches-container">
+            <a href="productpage.php?product_id=' . $row['product_id'] . '&category=' . $row['product_branche'] . '">
             <div class="productpage-product">
             <img src="' . $row['product_img_url'] . '" alt="">
-            </div>' . '<div class="productpage-description-container">
+            </div></a>' . '<div class="productpage-description-container">
             <div class="productpage-description">
             <h2>' . $row['product_name'] . '</h2>
             <p>' . $row['product_description'] . '</p>
@@ -41,7 +52,7 @@
         
 }
 ?>
-
-
+</div>
+<?php include "footer.php" ?>
 </body>
 </html>

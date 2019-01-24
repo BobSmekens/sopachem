@@ -8,58 +8,48 @@
   
 </head>
 <body class="branches-body">
-<div class="navbar">
-    <div class= "" id="branding"><a href="../index.php"><img src="..\img/sopachemlogo.png" alt=""></a></div>
-    <div class="navbar-container">
-        <a class="nav-link" href="">Watery fluids</a>
-        <a class="nav-link" href="">Human juice</a>
-        <a class="nav-link" href="">Nanobots</a>
-        <a class="nav-link" href="">Scienceses</a>
-     </div>
+
+<?php include "header.php" ?>
+
+<div class="supplier-banner">
+    <div class="supplier-banner-txt">
+    We help you find what you need.
+    Wether it be fluids or technology, or even fluids AND technology.
+    When you join our cult, the possibilities are endless. 
+    </div>
 </div>
 
-<?php 
-$brancheId = $_GET['category'];
-include "db_connection.php";
-$query = "SELECT product_category FROM products WHERE product_branche = $brancheId LIMIT 1";
-$db_result = $conn->query($query);  
-foreach ($db_result as $row)
-{            
-echo '<div class="branche-title">All ' . $row['product_category'] . ' products</div>';
-}
-?>
-    
-
-
     <?php
-    $brancheId = $_GET['category'];
+        $supplierId = $_GET['category'];
+        echo '<div class="supplier-title">' . $supplierId . '</div>';
+    ?>
+
+<div class="jumbo-wrapper">
+    <?php
+    $supplierId = $_GET['category'];
     include "db_connection.php";
-    $query = "SELECT * FROM products WHERE product_branche = $brancheId";
+    $query = "SELECT * FROM products WHERE product_category = '$supplierId'";
+    
     $db_result = $conn->query($query);  
+
+    
     foreach ($db_result as $row)
-    {            
+    {        
      echo 
-
-     '
-     <div class="branches-wrapper"><div class="productpage-branches-container">
+            '<div class="productpage-branches-container">
+            <a href="productpage.php?product_id=' . $row['product_id'] . '&category=' . $row['product_branche'] . '">
             <div class="branches-product">
-            <a href="productpage.php?product_id=' . $row['product_id'] . '&category='. $row['product_branche'] .'
-            ">
-            <img src="' . $row['product_img_url'] . '" alt=""></a>
-            </div>' . 
-            '<div class="branches-description-container">
-            <div class="branches-description">
-            <h2>' . $row['product_name'] . '</h2>' .
-            '<div class="product-rating"> Product rating: ' . $row['product_rating'] .
-
-        '</div>' .
-        '</div>
-    </div></div></div>'
-
-
-    ;    
+            <img src="' . $row['product_img_url'] . '" alt="">
+            </div></a>' . '<div class="productpage-description-container">
+            <div class="productpage-description">
+            <h2>' . $row['product_name'] . '</h2>
+            <p>' . $row['product_description'] . '</p>
+            </div>
+        </div>
+    </div>';   
 }
 ?>
-
+</div>
+<?php include "footer.php" ?>
 </body>
 </html>

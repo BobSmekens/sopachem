@@ -5,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../css\sopachem.css" />
+ 
 </head>
 <body>
+<?php include "header.php" ?>
 
-
-<div class="navbar">
-    <div class= "" id="branding"><a href="../index.php"><img src="..\img/sopachemlogo.png" alt=""></a></div>
-    <div class="navbar-container">
-        <a class="nav-link" href="">Watery fluids</a>
-        <a class="nav-link" href="">Human juice</a>
-        <a class="nav-link" href="">Nanobots</a>
-        <a class="nav-link" href="">Scienceses</a>
-     </div>
+<div class="supplier-banner debug">
+    <div class="supplier-banner-txt">
+    We help you find what you need.
+    Wether it be fluids or technology, or even fluids AND technology.
+    When you join our cult, the possibilities are endless. 
+    </div>
 </div>
+
 
 <?php include "singleproduct.php";   ?>
 
@@ -27,6 +26,7 @@
     <?php include "productpagearticlecard.php"; ?>
 </div>
 
+<?php include "footer.php" ?>
 </body>
 </html>
 
