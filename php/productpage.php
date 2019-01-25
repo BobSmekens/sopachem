@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<a href="allproducts.php" class="shop-link">Back to shop</a>
+<a href="allproducts.php" class="shop-link">&#8617 shop</a>
 
 <?php include "singleproduct.php";   ?>
 

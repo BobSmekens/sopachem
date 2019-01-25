@@ -117,17 +117,17 @@ body {
 }
 
 .shop-link {
-    height: 40px;
-    width: 150px;
+    height: 30px;
     text-align: center;
-    padding-top: 20px;
-    font-weight: 200;
-    font-size: 17px;
-    border: none;
-    background-color: orange;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    border: 1px solid grey;
+    border-radius: 0 15px 15px 0;
+    background-color: #fff;
     z-index: 3;
     position: fixed;
-    left: 40px;
+    left: 0;
     bottom: 60px;
 }
 
@@ -135,6 +135,7 @@ body {
     color: orange;
     background-color: white;
     transition: 0.5s;
+    border-color: orange;
 }
 
 .sopachem-banner {
@@ -337,7 +338,7 @@ body {
 
 .product-card2 {
     min-height: 300px;
-    max-height: 50vh;
+  
     flex: 1;
     width: 30%;
     min-width: 230px;
