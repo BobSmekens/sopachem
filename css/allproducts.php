@@ -11,7 +11,7 @@
 <?php include "header.php" ?>
 
 
-<div class="supplier-banner">
+<div class="supplier-banner debug">
     <div class="supplier-banner-txt">
         We only want the best for our customers. Thats why we select only the best of the best suppliers.
         This way we can guarantee only quality products and a 99 years warranty.
@@ -30,7 +30,7 @@
     <?php
     $supplierId = $_GET['product_supplier'];
     include "db_connection.php";
-    $query = "SELECT * FROM products WHERE product_supplier = '$supplierId'";
+    $query = "SELECT * FROM products";
     
     $db_result = $conn->query($query);  
 

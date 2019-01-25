@@ -10,7 +10,7 @@
 <body>
 <?php include "header.php" ?>
 
-<div class="supplier-banner debug">
+<div class="supplier-banner">
     <div class="supplier-banner-txt">
     We help you find what you need.
     Wether it be fluids or technology, or even fluids AND technology.
@@ -21,7 +21,7 @@
 
 <?php include "singleproduct.php";   ?>
 
-<div class="productpage-articles-title">Our fanatics say:</div>
+<div class="productpage-articles-title">Our fanatics liked these articles</div>
 <div class="productpage-articles-container">
     <?php include "productpagearticlecard.php"; ?>
 </div>

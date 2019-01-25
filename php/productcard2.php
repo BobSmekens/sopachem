@@ -16,15 +16,14 @@
 
     foreach ($db_result as $row)
     {            
-        echo '<div class="product-card ' . $row['product_category'] . '">' .
-            '<a href="php/productpage.php?product_id=' . $row['product_id'] .
+        echo '<div class="product-card2 ' . $row['product_category'] . '">' .
+            '<a href="productpage.php?product_id=' . $row['product_id'] .
              '&category='. $row['product_branche'] .'
             ">' .
-            '<img src="img/' . $row['product_img_url'] . '"></a>' .
+            '<img src="..\img/' . $row['product_img_url'] . '"></a>' .
             '<h2 class="product-name">' . $row['product_name'] . '</h2>' .
-            //'<p class="product-description">' . $row['product_description'] . 
-            ' Rating: ' .
-            $row['product_rating'] . '</p>' .
+            '<p class="product-description">' . $row['product_description'] . ' <br><br> Rating: ' .
+            $row['product_rating'] . '/10</p>' .
             '</div>';
     }  
     
