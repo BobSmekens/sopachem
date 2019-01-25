@@ -23,7 +23,7 @@
             '<img src="..\img/' . $row['product_img_url'] . '"></a>' .
             '<h2 class="product-name">' . $row['product_name'] . '</h2>' .
             '<p class="product-description">' . $row['product_description'] . ' <br><br> Rating: ' .
-            $row['product_rating'] . '/10</p>' .
+            $row['product_rating'] . '</p>' .
             '</div>';
     }  
     

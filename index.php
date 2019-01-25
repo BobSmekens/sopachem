@@ -30,7 +30,7 @@
 <div class="main-product-container">
     <div class="main-product-title">BMS Genesig X2.0</div>
     <div class="main-product-description">Fast, accurate, uniform DNA sequencer.</div>
-    <button id="shop-btn">SHOP NOW</button>
+    <a href="php/allproducts.php"><button class="shop-btn">SHOP NOW</button></a>
 
     <img src="img/zugase.png" alt="">
 </div>

@@ -14,7 +14,7 @@
     <div class="navbar-container">
         <a class="nav-link" href="..\php/allproducts.php?category=Fluids">All products</a>
         <a class="nav-link" href="..\php/branches.php?category=Fluids">Watery fluids</a>
-        <a class="nav-link" href="..\php/branches.php?category=Technology">Sciencing science scienceses</a>
+        <a class="nav-link" href="..\php/branches.php?category=Technology">Sciencing scienceses</a>
      </div>
 </div>
 

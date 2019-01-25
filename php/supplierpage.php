@@ -26,7 +26,28 @@
     echo '<div class="supplier-title">' . $supplierId . '</div>';
     ?>
 
+<div class="flex-wrapper">
+
+<div class="flexbox">
+    <div class="select-links-box">
+        <div class="supplier-box">
+            <span>Sort by category:</span>    
+            <?php include "db_connection.php";
+                    include "brancheslinks2.php";
+            ?>
+        </div>
+
+        <div class="supplier-box">
+            <span>Sort by supplier:</span>    
+            <?php include "db_connection.php";
+                include "supplierlinks2.php";
+            ?>
+        </div>
+    </div>
+</div>
+
 <div class="jumbo-wrapper">
+    
     <?php
     $supplierId = $_GET['product_supplier'];
     include "db_connection.php";
@@ -40,7 +61,7 @@
      echo 
             '<div class="productpage-branches-container">
             <a href="productpage.php?product_id=' . $row['product_id'] . '&category=' . $row['product_branche'] . '">
-            <div class="productpage-product">
+            <div class="branches-product">
             <img src="' . $row['product_img_url'] . '" alt="">
             </div></a>' . '<div class="productpage-description-container">
             <div class="productpage-description">
@@ -52,6 +73,7 @@
         
 }
 ?>
+    </div>
 </div>
 <?php include "footer.php" ?>
 </body>

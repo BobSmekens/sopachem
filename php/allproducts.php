@@ -20,17 +20,31 @@
 </div>
 
 <div class="whitespace supplier-title">All our products</div>
-<div class="products-container">
-    <?php 
-    
-    include "productcard2.php"
+<div class="flexbox">
+    <div class="select-links-box">
+        <div class="supplier-box">
+            <span>Sort by category:</span>    
+            <?php include "db_connection.php";
+                    include "brancheslinks2.php";
+            ?>
+        </div>
 
-    ?>
-
-</div>
+        <div class="supplier-box">
+            <span>Sort by supplier:</span>    
+            <?php include "db_connection.php";
+                include "supplierlinks2.php";
+            ?>
+        </div>
 
        
-
+    </div>
+<div class="products-container">
+        <?php 
+            include "db_connection.php";
+            include "productcard2.php" ;
+        ?>;
+</div>
+</div>
 
 <?php include "footer.php" ?>
 </body>

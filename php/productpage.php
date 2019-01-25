@@ -18,6 +18,7 @@
     </div>
 </div>
 
+<a href="allproducts.php" class="shop-link">Back to shop</a>
 
 <?php include "singleproduct.php";   ?>
 
